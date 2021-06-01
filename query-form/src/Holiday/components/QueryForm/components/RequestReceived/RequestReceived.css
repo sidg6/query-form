@@ -1,0 +1,70 @@
+.requestReceivedWrapper {
+    border: 1px solid #d4d4d4;
+    width: max-content;
+    position: relative;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 8px;
+}
+
+.requestReceivedWrapper::before {
+    width: 30px;
+    content: '';
+    border-radius: 50%;
+    height: 28px;
+    left: 45%;
+    position: absolute;
+    top: -24px;
+    z-index: 3;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.requestReceivedWrapper::after {
+    width: 30px;
+    content: '';
+    border-radius: 50%;
+    height: 28px;
+    left: 45%;
+    bottom: -24px;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-top: 1px solid #d4d4d4;
+}
+
+.requestReceivedWrapper .requestLocation {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+}
+
+.requestHeading {
+    font-size: 16px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 5px;
+    padding-bottom: 12px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.16);
+}
+
+.requestReceivedWrapper .checkMarkIcon {
+    margin-left: 17px;
+    background-position: 4px 3px;
+    width: 38px;
+    height: 38px;
+    transform: scale(1.5);
+    margin-top: 10px;
+    position: relative;
+}
+
+@media screen and (max-width: 480px) {
+    .requestReceivedWrapper {
+        margin-top: 30px;
+        width: -webkit-fill-available;
+        width: -moz-fill-available;
+        margin-left: 0px;
+        padding: 34px 33px;
+    }
+}

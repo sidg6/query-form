@@ -1,0 +1,63 @@
+.searchCityWrapper {
+    width: 300px;
+    height: 282px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    top: 70px;
+    overflow-y: scroll;
+}
+
+.listWrapper .name {
+    padding: 10px 0px;
+    font-weight: 700;
+}
+
+.listWrapper .name:hover, .listWrapper .name:focus {
+    background-color: rgba(0, 140, 255, 0.64);
+    color: #fff;
+    cursor: pointer;
+}
+
+.listWrapper .disabled {
+    opacity: 0.5;
+    cursor: none;
+}
+
+.searchCityWrapper .citySearchIcon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-position: -158px 1px;
+}
+
+.searchCityWrapper .citySearchInput {
+    width: 100%;
+    height: 30px;
+    padding-left: 30px;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .searchCityWrapper .backArrowGrey.left {
+        transform: rotate(-180deg);
+    }
+    .searchCityWrapper .clear {
+        position: absolute;
+        right: 20px;
+        text-transform: capitalize;
+        top: 15px;
+    }
+    .searchCityWrapper .citySearchInput {
+        border: 0px;
+    }
+    .searchCityWrapper .listWrapper {
+        border-top: 1px solid rgb(212 212 212 / 0.5);
+    }
+    .searchCityWrapper .name {
+        padding: 10px 30px;
+    }
+}

@@ -1,0 +1,30 @@
+.thankyouHeader {
+    font-size: 30px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 15px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.thankyouHeader .closeIcon {
+    top: 24px;
+}
+
+.thankYouModalWrapper .info {
+    margin-bottom: 25;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 480px) {
+    .thankYouModalWrapper.contentWrapper {
+        width: 100% !important;
+        height: 100%;
+        padding: 25px 15px;
+        border-radius: 0px;
+        overflow-y: scroll;
+    }
+}

@@ -1,0 +1,14 @@
+.detailsInput::after {
+    content: '*';
+    color: #eb2026;
+}
+
+.inputField {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #e2e2e2;
+}
+
+.inputField:focus {
+    border: 1px solid rgba(0, 140, 255, 0.85);
+}

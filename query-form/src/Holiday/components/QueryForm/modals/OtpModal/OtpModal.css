@@ -1,0 +1,135 @@
+.inputNumberWrapper input[type=number]::-webkit-outer-spin-button,
+.inputNumberWrapper input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.otpModalWrapper .otpHeader {
+    margin-top: 25px;
+}
+
+.otpModalWrapper .heading {
+    margin-bottom: 8px;
+}
+
+.inputNumberWrapper input[type=number] {
+    -moz-appearance: textfield;
+    width: inherit;
+}
+
+.otpInputWrapper {
+    display: flex;
+    margin-bottom: 97px;
+    width: 410px;
+    position: relative;
+}
+
+.inputNumberWrapper {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.inputNumberWrapper .inputField {
+    padding-right: 100px;
+    margin-bottom: 8px;
+}
+
+.resendCounter {
+    position: absolute;
+    right: 16px;
+    border-bottom: 1px solid #979797;
+    margin: 10px 0px;
+    color: #979797;
+    font-weight: 700;
+}
+
+.resendEnabled {
+    color: #008cff;
+}
+
+.resendCounter.linkText {
+    border-bottom: 1px solid #008cff;
+}
+
+.otpModalWrapper .backArrowGrey, .otpModalWrapper .autoFetching {
+    display: none;
+}
+
+.otpInputWrapper {
+    position: relative;
+}
+
+.otpModalWrapper .skipBtn {
+    color: #008cff;
+}
+
+@media screen and (max-width: 480px) {
+    .otpModalWrapper.contentWrapper {
+        width: 100% !important;
+        height: 100%;
+        padding: 25px 15px;
+        border-radius: 0px;
+    }
+    .otpModalWrapper .heading {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #000;
+    }
+    .otpModalWrapper .subHeading {
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .otpModalWrapper .closeIcon,
+    .otpModalWrapper .number,
+    .otpModalWrapper .info,
+    .otpModalWrapper .skipBtn  {
+        display: none;
+    }
+    .otpModalWrapper .backArrowGrey, .otpModalWrapper .autoFetching {
+        display: block;
+    }
+    .otpModalWrapper .backArrowGrey.left {
+        transform: rotate(-180deg);
+    }
+    .otpModalWrapper .otpHeader {
+        margin-top: 50px;
+    }
+    .otpModalWrapper .otpInputWrapper {
+        margin-bottom: 0px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .otpModalWrapper .inputNumberWrapper {
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .otpModalWrapper .otpMessage {
+        margin-top: 8px;
+    }
+    .otpModalWrapper .inputField {
+        margin-bottom: 0px;
+    }
+    .otpModalWrapper .autoFetching {
+        margin-bottom: 15px;
+    }
+    .otpModalWrapper .resendCounter {
+        position: relative;
+        right: 0px;
+        width: fit-content;
+        margin-top: 0px;
+        font-weight: 400;
+        color: #9b9b9b;
+        border-bottom: 1px solid #9b9b9b;
+    }
+    .otpModalWrapper footer {
+        bottom: 25px;
+        position: absolute;
+        width: 100%;
+        padding-right: 30px;
+    }
+    .otpModalWrapper .buttonWrapper {
+        border-radius: 6px !important;
+        width: 100% !important;
+    }
+}

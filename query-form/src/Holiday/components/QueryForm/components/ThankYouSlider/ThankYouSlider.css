@@ -1,0 +1,204 @@
+.thankYouWrapper .slick-track {
+    display: flex;
+    margin-left: 8px;
+}
+
+.thankYouWrapper .slick-initialized .slick-slide {
+    width: 390px !important;
+    margin-right: 32px;
+    flex-shrink: 0;
+}
+
+.thankYouWrapper .slick-slide>div {
+    height: 100%;
+}
+
+.thankYouWrapper .slideItem {
+    position: relative;
+    box-shadow: 0 0 14px 0 rgba(203, 203, 203, 0.5);
+    display: flex !important;
+    border-radius: 6px;
+    outline: none;
+    background: #fff;
+    margin-top: 24px;
+    padding: 15px 18px;
+}
+
+.thankYouWrapper .slideItem__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: -8px;
+    right: 5px;
+    padding: 2px 6px;
+    border-radius: 14px;
+    background-image: linear-gradient(79deg, #43e1a8, #28beb2);
+}
+
+.thankYouWrapper .slick-slider .slick-prev {
+    top: -36px;
+    right: 31px;
+}
+
+.thankYouWrapper .slick-slider .slick-next {
+    top: -36px;
+    right: 0;
+}
+
+.thankYouWrapper .slick-slider button {
+    height: 30px;
+    width: 34px;
+}
+
+.thankYouWrapper .recentImg {
+    border-radius: 0px;
+}
+
+.thankYouWrapper .arrowWrapper {
+    width: 68px;
+    height: 30px;
+    margin: 0 0 0 16px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    position: relative;
+}
+
+.thankYouWrapper .backArrow {
+    cursor: pointer;
+    border: solid #008cff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    top: -1px;
+    position: relative;
+}
+
+.thankYouWrapper .nextArrow {
+    border: solid #008cff;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    margin-top: 5px;
+    float: right;
+    position: relative;
+}
+
+.thankYouWrapper .backArrow.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.thankYouWrapper .nextArrow.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.thankYouWrapper .cardHeading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.thankYouWrapper .priceWrapper {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.thankYouWrapper .sliderSubHeading {
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.thankYouWrapper .newPrice {
+    font-weight: 900;
+    font-size: 16px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.thankYouWrapper .strikePrice {
+    font-weight: 700;
+    color: #000;
+}
+
+.thankYouWrapper .lobs {
+    font-size: 12px;
+    display: flex;
+    color: #249995;
+    justify-content: space-between;
+}
+
+.thankYouWrapper .subInfo {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #9b9b9b;
+}
+
+@media screen and (max-width: 480px) {
+    .thankYouWrapper .sliderHeading {
+        font-size: 16px;
+    }
+    .thankYouWrapper .headingWrapper {
+        margin-left: 0px;
+    }
+    .thankYouWrapper .arrowWrapper {
+        display: none;
+    }
+    .thankYouWrapper .sliderSubHeading {
+        font-size: 12px;
+        color: #000;
+        font-weight: 700;
+    }
+    .thankYouWrapper .slick-initialized .slick-slide {
+        width: 325px !important;
+    }
+    .thankYouWrapper .slick-slider {
+        margin-left: -8px;
+    }
+    .thankYouWrapper .imageWrapper {
+        width: 90px !important;
+        height: 107px;
+    }
+    .thankYouWrapper .cardHeading {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+    .thankYouWrapper .landingCardSlider {
+        overflow-y: scroll;
+        height: 400px;
+        margin-left: -5px;
+    }
+    .thankYouWrapper .sliderWrapper {
+        margin-bottom: 30px;
+    }
+    .thankYouWrapper .slideItem {
+        min-height: 130px;
+        margin: 12px 5px;
+    }
+    .thankYouWrapper .subInfo, .thankYouWrapper .lobs {
+        font-size: 10px;
+        font-family: Helvetica;
+        line-height: 10px;
+    }
+    .thankYouWrapper .circle {
+        font-size: 20px;
+        top: 2px;
+        position: relative;    
+    }
+}

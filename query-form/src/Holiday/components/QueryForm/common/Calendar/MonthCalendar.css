@@ -1,0 +1,59 @@
+.customMonthCalendar {
+    width: 308px;
+    height: 230px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 3;
+    top: 180px;
+}
+
+.customMonthCalendar .prevArrow {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    background-position: -253px -14px;
+    transform: rotate(180deg) scale(0.5);
+    left: 0px;
+    cursor: pointer;
+}
+
+.customMonthCalendar .show {
+    visibility: visible;
+}
+
+.customMonthCalendar .hide {
+    visibility: hidden;
+}
+
+.customMonthCalendar .nextArrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-position: -107px 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.customMonthCalendar .monthName {
+    margin: 10px;
+}
+
+.customMonthCalendar .monthName.disabled {
+    pointer-events: none;
+    color: #DCE0E0;
+}
+
+.customMonthCalendar .monthName.active {
+    background-color: #008cff;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.customMonthCalendar .monthName:hover {
+    cursor: pointer;
+    background-color: #008cff;
+    border-radius: 4px;
+    color: #fff;
+}

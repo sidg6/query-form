@@ -1,0 +1,39 @@
+.planningHolidayModalWrapperV2 .accordianSubHeading {
+    margin-bottom: 16px;
+}
+
+.planningHolidayModalWrapperV2 .detailsBoxWrapper {
+    padding: 17px 15px 24px 15px;
+    margin-bottom: 24px;
+}
+
+.planningHolidayModalWrapperV2 .travelDetailsTxt {
+    color: rgba(0, 15, 33, 0.6);
+}
+
+.planningHolidayModalWrapperV2 .namasteIcon {
+    width: 160px;
+    height: 110px;
+    background-image: url('../../../../assets/namaste1.png');
+    background-size: cover;
+}
+
+.planningHolidayModalWrapperV2 .completedStep {
+    font-size: 20px;
+    color: #4b4b4b;
+}
+
+.planningHolidayModalWrapperV2 .blueText {
+    font-weight: bold;
+    color: #008cff;  
+}
+
+.planningHolidayModalWrapperV2 .underlineText {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    .planningHolidayModalWrapperV2 .completedStep {
+        font-size: 18px;
+    }
+}

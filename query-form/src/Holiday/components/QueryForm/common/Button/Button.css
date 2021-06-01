@@ -1,0 +1,32 @@
+.buttonWrapper {
+    font-size: 16px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-family: lato;
+    border-radius: 25px;
+    background-image: linear-gradient(72deg, #f0772c -8%, #f95776 105%);
+    color: #fff;
+    border: 0px;
+    font-weight: 900;
+}
+
+.blueGradientStyle {
+    background-image: linear-gradient(to right, #53b2fe, #065af3);
+}
+
+.disabledStyle {
+    background-image: unset;
+    background-color: #000;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.disabledStyle .btnText, .disabledStyle .nextArrowWhite {
+    opacity: 0.5;
+}
+
+.blueStyle {
+    background-image: unset;
+    background-color: #008cff;
+}

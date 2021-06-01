@@ -1,0 +1,13 @@
+.budgetSlider {
+    width: 308px;
+}
+
+.budgetSlider .rc-slider {
+    margin: 10px 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .budgetSlider {
+        width: inherit;
+    }
+}
