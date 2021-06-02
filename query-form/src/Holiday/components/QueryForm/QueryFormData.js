@@ -120,16 +120,19 @@ export const dropdownListData = [
 
 export const countryCodeList = [
     {
+        id: 1,
         flagName: 'india',
         countryName: 'India',
         code: '+91'
     },
     {
+        id: 2,
         flagName: 'usa',
         countryName: 'USA',
         code: '+1'
     },
     {
+        id: 3,
         flagName: 'uae',
         countryName: 'UAE',
         code: '+971'

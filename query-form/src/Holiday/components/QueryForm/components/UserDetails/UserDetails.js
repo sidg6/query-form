@@ -15,7 +15,7 @@ const UserDetails = () => {
       setArrowActiveClass('');
     }
     if (document.getElementsByClassName('countryCodeWrapper')[0]) {
-      document.getElementsByClassName('countryList')[0].focus();
+      document.getElementsByClassName('countryList')[queryContext.countryCodeObj.id-1].focus();
     }
   }, [queryContext.dropdownStates.showCountryDropdown, queryContext.countryCodeObj]);
 
