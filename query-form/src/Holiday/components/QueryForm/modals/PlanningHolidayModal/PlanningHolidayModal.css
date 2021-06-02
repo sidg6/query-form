@@ -120,6 +120,7 @@
     z-index: 3;
     top: 39px;
     left: 0px;
+    overflow-y: scroll;
 }
 
 .userDetailsWrapper .countryCodeWrapper .countryFlag {
@@ -361,8 +362,8 @@
 }
 
 .planningHolidayModelWrapper .infoMessageDetails {
-    font-size: 20px;
-    color: #4b4b4b;
+    font-size: 18px;
+    color: #249995;
 }
 
 .planningHolidayModelWrapper .disclaimer {

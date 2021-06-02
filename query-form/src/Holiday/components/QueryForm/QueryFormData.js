@@ -21,7 +21,7 @@ export const fieldsTextData = [
 
 export const fieldsTextData2 = [
     {
-        heading: 'How can we get in touch with you <span class="latoIlalic ">(Step 1 of 2)</span>',
+        heading: 'How can we get in touch with you <span class="latoIlalic">(Step 1 of 2)</span>',
         subHeading: 'Our Holiday Experts will contact you on the below details',
         componentName: 'UserDetails',
         completedMessage: '<p class="latoBold">Okay! We have your contact details.</p>'

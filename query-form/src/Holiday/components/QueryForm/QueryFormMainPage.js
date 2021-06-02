@@ -268,10 +268,16 @@ const QueryFormMainPage = () => {
         }
     }
 
-    const selectCountryHandler = (event, countryObj) => {
+    const selectCountryHandler = (event, countryObj, index) => {
         if (event.keyCode === 13 || event.keyCode === undefined) {
             setSelectedCountryObj(countryObj);
             countryChangeHandler(event);
+        }
+        if (event.keyCode === 40 && index < countryCodeList.length - 1) {
+            document.getElementsByClassName('countryList')[index + 1].focus();
+        }
+        if (event.keyCode === 38 && index !== 0) {
+            document.getElementsByClassName('countryList')[index - 1].focus();
         }
     }
 
@@ -281,15 +287,15 @@ const QueryFormMainPage = () => {
                 setFromCity(name);
                 setFromCityFieldError(false);
                 setFromCityFieldErrorMessage('');
-                {!isMobile && searchHandler("toCity");}
+                { !isMobile && searchHandler("toCity"); }
             }
             if (setValue === "toCity") {
                 setToCity(name);
                 setToCityFieldError(false);
                 setToCityFieldErrorMessage('');
-                {!isMobile &&  setShowSearchCityFor('');}
+                { !isMobile && setShowSearchCityFor(''); }
             }
-            {isMobile &&  setShowSearchCityFor('');}
+            { isMobile && setShowSearchCityFor(''); }
             setFilteredData(dropdownListData);
             updateSearchedValue('');
             setShowDropdown(false);
@@ -315,7 +321,7 @@ const QueryFormMainPage = () => {
 
     const updateFromDate = (event, from) => {
         setFromDate(from);
-        {!isMobile && updateCalendarFlag(false);}
+        { !isMobile && updateCalendarFlag(false); }
         setSelectedDateFieldErrorMessage('');
         setSelectedDateFieldError(false);
         setShowDropdown(false);

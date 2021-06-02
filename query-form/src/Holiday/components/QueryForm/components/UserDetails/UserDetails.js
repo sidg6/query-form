@@ -14,7 +14,10 @@ const UserDetails = () => {
     } else {
       setArrowActiveClass('');
     }
-  }, [queryContext.dropdownStates.showCountryDropdown, queryContext.countryCodeObj])
+    if (document.getElementsByClassName('countryCodeWrapper')[0]) {
+      document.getElementsByClassName('countryList')[0].focus();
+    }
+  }, [queryContext.dropdownStates.showCountryDropdown, queryContext.countryCodeObj]);
 
   return (
     <div className="userDetailsWrapper">
@@ -78,8 +81,8 @@ const UserDetails = () => {
                       tabIndex={0}
                       key={index}
                       className="countryList"
-                      onKeyDown={(event) => queryContext.selectCountryHandler(event, countryList)}
-                      onClick={(event) => queryContext.selectCountryHandler(event, countryList)}>
+                      onKeyDown={(event) => queryContext.selectCountryHandler(event, countryList, index)}
+                      onClick={(event) => queryContext.selectCountryHandler(event, countryList, index)}>
                       <span className={`queryFormBgProperties countryFlag ${countryList.flagName}`}></span>
                       <p className="countryDetailsWrapper">
                         <span className="countryName">

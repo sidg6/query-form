@@ -16,7 +16,7 @@ const ThankYouMobile = ({ closeModal }) => {
                     <span className="queryFormBgProperties thankYouImage"></span>
                 </div>
                 <div className="makeFlex column">
-                    <h4 className="font20 darkBlue025dd2 latoBolder heading">Thank You Devesh!</h4>
+                    <h4 className="font20 darkBlue025dd2 latoBolder heading">Thank You {queryContext.nameFieldState.name}</h4>
                     <div className="makeFlex hrtlCenter">
                         <p className="description">Our Holiday Expert will shortly reach out to you with our best quotations.</p>
                         <span className="queryFormBgProperties checkMarkIcon"></span>
