@@ -13,7 +13,7 @@ export const fieldsTextData = [
     },
     {
         heading: 'Tell us more about your travel preferences',
-        subHeading: 'Provide some optional details so that our experts can assist you better <span class="latoBold>(optional)</span>',
+        subHeading: 'Provide some optional details so that our experts can assist you better <span class="latoIlalic latoBold">(optional)</span>',
         componentName: 'AdditionalDetails',
         completedMessage: ''
     }
@@ -21,7 +21,7 @@ export const fieldsTextData = [
 
 export const fieldsTextData2 = [
     {
-        heading: 'How can we get in touch with you <span class="latoIlalic">(Step 1 of 2)</span>',
+        heading: 'How can we get in touch with you <span class="latoIlalic ">(Step 1 of 2)</span>',
         subHeading: 'Our Holiday Experts will contact you on the below details',
         componentName: 'UserDetails',
         completedMessage: '<p class="latoBold">Okay! We have your contact details.</p>'
