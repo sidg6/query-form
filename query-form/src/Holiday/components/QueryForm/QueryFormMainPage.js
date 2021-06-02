@@ -399,7 +399,7 @@ const QueryFormMainPage = () => {
                         handleClick={showModalHandler}
                     />
                 </li>
-                <li className="appendBottom10">
+                {/* <li className="appendBottom10">
                     <Button
                         tabIndex={1}
                         btnTxt="Similar Request1"
@@ -438,7 +438,7 @@ const QueryFormMainPage = () => {
                         showInfo={"thankYouV2"}
                         handleClick={showModalHandler}
                     />
-                </li>
+                </li> */}
             </ul>
 
             <QueryFormContext.Provider
