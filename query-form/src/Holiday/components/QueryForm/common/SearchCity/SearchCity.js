@@ -11,7 +11,7 @@ const SearchCity = ({ placeholder, value, inputHandler, isMobile, closeSearchMod
             <div className="makeFlex relative padding5">
                 <span className={`queryFormBgProperties ${isMobile ? ' backArrowGrey left ' : 'citySearchIcon'}`} onClick={isMobile ? closeSearchModal : ''}></span>
                 <input type="text" className="citySearchInput" placeholder={placeholder} value={value} onChange={inputHandler} autoFocus />
-                {isMobile && <span className="latoBold linkText font12 clear">clear</span>}
+                {isMobile && <span className="latoBold linkText font12 clear" onClick={queryContext.clearSearchHandler}>clear</span>}
             </div>
             {
                 <div className="listWrapper">

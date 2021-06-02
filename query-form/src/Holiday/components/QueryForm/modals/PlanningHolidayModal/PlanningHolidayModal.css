@@ -281,7 +281,7 @@
 }
 
 .travellerWrapper .searchCityWrapper {
-    z-index: 5;
+    z-index: 99;
 }
 
 .travellerWrapper .calendarWrapper {
@@ -351,19 +351,6 @@
 .planningHolidayModelWrapper .buttonWrapper.disabled .btnText {
     opacity: 0.8;
     pointer-events: none;
-}
-
-.planningHolidayModelWrapper .skipButton {
-    top: 25px;
-    position: relative;
-    font-weight: 700;
-    color: #008cff;
-    cursor: pointer;
-}
-
-.planningHolidayModelWrapper .skipButton.disabled {
-    pointer-events: none;
-    color: #4b4b4b;
 }
 
 .planningHolidayModelWrapper .accordianSubHeading {
@@ -443,6 +430,7 @@
     }
     .planningHolidayModelWrapper .heading {
         font-size: 24px;
+        margin-top: 30px;
     }
     .planningHolidayModelWrapper .accordianSubHeading {
         font-size: 16px;
@@ -522,7 +510,7 @@
         position: fixed;
         top: 0px;
         left: 0px;
-        z-index: 6;
+        z-index: 99;
     }
     .travellerWrapper .DayPicker-NavBar {
         display: none;
@@ -565,7 +553,7 @@
         display: block;
         background-color: #fff;
         left: 93%;
-        z-index: 1;
+        z-index: 6;
         transform: translateX(-50%) rotate(45deg);
     }
     .travellerWrapper .arrowDown::after {
@@ -594,6 +582,7 @@
         padding-right: 30px;
         padding-top: 10px;
         background-color: #fff;
+        z-index: 9;
     }
     .additionalDetailsWrapper .ratingWrapper {
         width: 88px;

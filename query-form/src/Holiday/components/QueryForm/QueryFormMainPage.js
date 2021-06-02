@@ -315,10 +315,14 @@ const QueryFormMainPage = () => {
 
     const updateFromDate = (event, from) => {
         setFromDate(from);
-        updateCalendarFlag(false);
+        {!isMobile && updateCalendarFlag(false);}
         setSelectedDateFieldErrorMessage('');
         setSelectedDateFieldError(false);
         setShowDropdown(false);
+    }
+
+    const calendarDoneBtnHandler = () => {
+        updateCalendarFlag(false)
     }
 
     const calendarFlagHandler = (event) => {
@@ -370,6 +374,11 @@ const QueryFormMainPage = () => {
         setShowSearchCityFor('');
     }
 
+    const clearSearchHandler = () => {
+        updateSearchedValue('');
+        setFilteredData(dropdownListData);
+    }
+
     return (
         <div className="queryFormWrapper">
             <h1 className="textCenter queryHeading">Query Form Modal</h1>
@@ -390,7 +399,7 @@ const QueryFormMainPage = () => {
                         handleClick={showModalHandler}
                     />
                 </li>
-                {/* <li className="appendBottom10">
+                <li className="appendBottom10">
                     <Button
                         tabIndex={1}
                         btnTxt="Similar Request1"
@@ -429,7 +438,7 @@ const QueryFormMainPage = () => {
                         showInfo={"thankYouV2"}
                         handleClick={showModalHandler}
                     />
-                </li> */}
+                </li>
             </ul>
 
             <QueryFormContext.Provider
@@ -445,6 +454,7 @@ const QueryFormMainPage = () => {
                     fromDate: fromDate,
                     searchedValue: searchedValue,
                     filteredData: filteredData,
+                    clearSearchHandler: clearSearchHandler,
                     nameFieldState: {
                         name: name,
                         nameFieldError: nameFieldError,
@@ -490,7 +500,8 @@ const QueryFormMainPage = () => {
                     searchHandler: searchHandler,
                     inputHandler: inputHandler,
                     monthSelectionHandler: monthSelectionHandler,
-                    closeSearchModal: closeSearchModal
+                    closeSearchModal: closeSearchModal,
+                    calendarDoneBtnHandler: calendarDoneBtnHandler
                 }}
             >
                 {

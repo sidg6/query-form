@@ -19,9 +19,9 @@ const TravelDetails = () => {
                         labelName="Starting From"
                         placeHolderValue="Enter City"
                         classes={`startingFromInput ${queryContext.travelFieldState.fromCityFieldError ? "redBorder" : ""}`}
-                        searchHandler={!isMobile ? () => queryContext.searchHandler('fromCity') : ''}
+                        searchHandler={() => queryContext.searchHandler('fromCity')}
                         value={queryContext.travelFieldState.fromCity} >
-                        {isMobile && <span className="change" onClick={() => queryContext.searchHandler('fromCity')}>change</span>}
+                        {isMobile && queryContext.travelFieldState.fromCity !=='' && <span className="change" onClick={() => queryContext.searchHandler('fromCity')}>change</span>}
                     </InputText>
                     {
                         queryContext.travelFieldState.fromCityFieldError &&
@@ -47,9 +47,9 @@ const TravelDetails = () => {
                         labelName="Travelling To"
                         placeHolderValue="Enter City"
                         classes={`travellingToInput ${queryContext.travelFieldState.toCityFieldError ? "redBorder" : ""}`}
-                        searchHandler={!isMobile ? () => queryContext.searchHandler('toCity') : ''}
+                        searchHandler={() => queryContext.searchHandler('toCity')}
                         value={queryContext.travelFieldState.toCity}>
-                        {isMobile && <span className="change" onClick={() => queryContext.searchHandler('toCity')}>change</span>}
+                        {isMobile && queryContext.travelFieldState.toCity !=='' && <span className="change" onClick={() => queryContext.searchHandler('toCity')}>change</span>}
                     </InputText>
                     {
                         queryContext.travelFieldState.toCityFieldError &&
@@ -78,7 +78,7 @@ const TravelDetails = () => {
                         <InputRadio
                             inputName="fixedDate"
                             radioChangeHandler={(event) => queryContext.radioChangeHandler(event, 'days')}
-                            checkRadio={queryContext.calendarTypeToShow === "days"} />
+                            checkRadio={queryContext.calendarTypeToShow == "days"} />
                         <span
                             tabIndex={0}
                             className="appendLeft5"
@@ -91,7 +91,7 @@ const TravelDetails = () => {
                         <InputRadio
                             inputName="fixedDate"
                             radioChangeHandler={(event) => queryContext.radioChangeHandler(event, "months")}
-                            checkRadio={queryContext.calendarTypeToShow === "months"} />
+                            checkRadio={queryContext.calendarTypeToShow == "months"} />
                         <span
                             tabIndex={0}
                             className="appendLeft5"

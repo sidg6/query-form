@@ -13,7 +13,7 @@ export const fieldsTextData = [
     },
     {
         heading: 'Tell us more about your travel preferences',
-        subHeading: 'Provide some optional details so that our experts can assist you better',
+        subHeading: 'Provide some optional details so that our experts can assist you better <span class="latoBold>(optional)</span>',
         componentName: 'AdditionalDetails',
         completedMessage: ''
     }

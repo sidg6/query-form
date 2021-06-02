@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import AdditionalDetails from '../../components/AdditionalDetails/AdditionalDetails';
 import TravelDetails from '../../components/TravelDetails/TravelDetails';
@@ -35,9 +36,6 @@ const AccordionWrapper = ({ fieldData, index, activeTabIndex }) => {
                 {
                     (activeTabIndex !== 2 || index !== 2 || isMobile) &&
                     <span className={`appendRight10 blueArrow ${activeTabIndex === index ? 'active' : ''}`}></span>
-                }
-                {
-                    activeTabIndex === 2 && index === 2 && !isMobile && <span className={`skipButton ${queryContext.getBtnActive ? '' : 'disabled'}`}>Skip</span>
                 }
             </div>
             {

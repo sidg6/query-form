@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
+import QueryFormContext from '../../queryFormContext/QueryFormContext';
 import DayPicker from './DayPicker';
 
-class SelectDateOverlay extends Component {
+const SelectDateOverlay = (props) => {
+	let queryContext = useContext(QueryFormContext);
 
-	render() {
-		const isMobile = window.innerWidth < 767 ? true : false;
-		return (
-			<div className="dayPickerWrap animated visible slideUpEffect">
-				<DayPicker from={this.props.from} updateFromDate={this.props.updateFromDate} />
-				{isMobile && <span className="doneBtn font14">Done</span>}
-			</div>
-		);
-	}
+	const isMobile = window.innerWidth < 767 ? true : false;
+	return (
+		<div className="dayPickerWrap animated visible slideUpEffect">
+			<DayPicker from={props.from} updateFromDate={props.updateFromDate} />
+			{isMobile && <span className="doneBtn font14" onClick={queryContext.calendarDoneBtnHandler}>Done</span>}
+		</div>
+	);
 }
 
 export default SelectDateOverlay;

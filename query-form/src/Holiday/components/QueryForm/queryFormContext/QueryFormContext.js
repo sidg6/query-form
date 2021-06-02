@@ -57,8 +57,9 @@ const QueryFormContext = React.createContext({
     searchHandler: () => { },
     inputHandler: () => { },
     monthSelectionHandler: () => { },
-    closeSearchModal: () => { }
-
+    closeSearchModal: () => { },
+    clearSearchHandler: () => { },
+    calendarDoneBtnHandler: () => { }
 });
 
 export default QueryFormContext;
