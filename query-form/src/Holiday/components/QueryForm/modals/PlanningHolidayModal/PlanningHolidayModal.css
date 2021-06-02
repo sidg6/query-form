@@ -582,7 +582,7 @@
         padding-right: 30px;
         padding-top: 10px;
         background-color: #fff;
-        z-index: 9;
+        z-index: 1;
     }
     .additionalDetailsWrapper .ratingWrapper {
         width: 88px;
