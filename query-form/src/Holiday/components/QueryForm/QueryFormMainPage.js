@@ -258,7 +258,7 @@ const QueryFormMainPage = () => {
     }
 
     const countryChangeHandler = (event) => {
-        if (event.keyCode === 13 || event.keyCode === undefined) {
+        if (event.keyCode === 13 || event.keyCode === 9 || event.keyCode === undefined) {
             setShowCountryDropdown(!showCountryDropdown);
             if (!showCountryDropdown) {
                 setShowDropdown(!showCountryDropdown);
@@ -269,7 +269,7 @@ const QueryFormMainPage = () => {
     }
 
     const selectCountryHandler = (event, countryObj, index) => {
-        if (event.keyCode === 13 || event.keyCode === undefined) {
+        if (event.keyCode === undefined) {
             setSelectedCountryObj(countryObj);
             countryChangeHandler(event);
         }
@@ -278,6 +278,12 @@ const QueryFormMainPage = () => {
         }
         if (event.keyCode === 38 && index !== 0) {
             document.getElementsByClassName('countryList')[index - 1].focus();
+        }
+        if (event.keyCode === 38 || event.keyCode === 40) {
+            setSelectedCountryObj(countryObj);
+        }
+        if (event.keyCode === 9 || event.keyCode === 13) {
+            countryChangeHandler(event);
         }
     }
 
