@@ -7,6 +7,7 @@ const UserDetails = () => {
   const [arrowActiveClass, setArrowActiveClass] = useState('');
 
   const queryContext = useContext(QueryFormContext);
+  const [defaultFocus, setDefaultFocus] = useState(true);
 
   useEffect(() => {
     if (queryContext.dropdownStates.showCountryDropdown) {
@@ -14,10 +15,22 @@ const UserDetails = () => {
     } else {
       setArrowActiveClass('');
     }
-    if (document.getElementsByClassName('countryCodeWrapper')[0]) {
-      document.getElementsByClassName('countryList')[queryContext.countryCodeObj.id-1].focus();
+    if (document.getElementsByClassName('countryCodeWrapper')[0] && defaultFocus) {
+      document.getElementsByClassName('countryList')[queryContext.countryCodeObj.id - 1].focus();
     }
-  }, [queryContext.dropdownStates.showCountryDropdown, queryContext.countryCodeObj]);
+    if (!defaultFocus && document.getElementsByClassName('countryCodeWrapper')[0]) {
+      document.getElementsByClassName('countryList')[queryContext.countryCodeObj.id - 1].blur();
+    }
+    if (!queryContext.dropdownStates.showCountryDropdown) {
+      setDefaultFocus(true);
+    }
+  }, [queryContext.dropdownStates.showCountryDropdown, queryContext.countryCodeObj, defaultFocus]);
+
+  const removeDefaultFocus = (event) => {
+    if (event.keyCode === undefined) {
+      setDefaultFocus(false);
+    }
+  }
 
   return (
     <div className="userDetailsWrapper">
@@ -81,7 +94,8 @@ const UserDetails = () => {
                       tabIndex={0}
                       key={index}
                       className="countryList"
-                      onKeyDown={(event) => queryContext.selectCountryHandler(event, countryList, index)}
+                      onMouseEnter={(event) => removeDefaultFocus(event)}
+                      onKeyDown={(event) => queryContext.selectCountryHandler(event, event.keyCode === 40 ? countryCodeList[index + 1 > countryCodeList.length - 1 ? countryCodeList.length - 1 : index + 1] : countryCodeList[index - 1 < 0 ? 0 : index - 1], index)}
                       onClick={(event) => queryContext.selectCountryHandler(event, countryList, index)}>
                       <span className={`queryFormBgProperties countryFlag ${countryList.flagName}`}></span>
                       <p className="countryDetailsWrapper">
